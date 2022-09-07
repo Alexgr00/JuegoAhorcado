@@ -1,0 +1,601 @@
+/*Ahorcado 1 Figma*/
+body,
+html {
+    background: #e9ecf8;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+    width: 100%;
+}
+
+.logo {
+    width: 60px;
+    margin: 2em 0 0 2em;
+}
+
+.screen-buttons-principal {
+    width: 100%;
+    display: block;
+}
+
+.ul-inicio {
+    display: table; 
+    margin: 0 auto;
+}
+
+.buttons-position-start {
+    margin: 6.5em 0;
+}
+
+.button-start-game {
+    display: flex;
+    height: 10em;
+    width: 20em;
+    font-size: 1em;
+    background: #AAB2D5;
+    border-radius: 20px;
+    border: none;
+}
+
+.button-start-game span {
+    margin: auto;
+    font-size: 30px;
+    color: #FAF3F3;
+}
+
+.button-add-word {
+    display: flex;
+    height: 8em;
+    width: 15em;
+    margin-left: 2.5em;
+    font-size: 1em;
+    border-radius: 18px;
+    border: none;
+    background: #F5F5DC;
+}
+
+.button-add-word span {
+    margin: auto;
+    font-size: 20px;
+    color: #0A3871;
+}
+
+/*Pantalla Ingresar Palabra*/
+
+
+.screen-add-word {
+    display: none;
+}
+
+.textarea-position {
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.textarea-position textarea {
+    display: block;
+    margin: 2em auto 5em auto;
+    height: 2.5em;
+    background: none transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 3.5em;
+}
+
+.advice-words {
+    width: 35%;
+    display: block;
+    margin: 1em auto;
+}
+
+.advice-words span {
+    font-size: 1.3em;
+}
+
+/*.ul-add-word-position {
+}*/
+
+.ul-add-word {
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ul-add-word li {
+    display: inline-block;
+    text-align: left;
+}
+
+.button-save {
+    height: 7em;
+    width: 20em;
+    font-size: 1em;
+    background: #AAB2D5;
+    border-radius: 20px;
+    border: none;
+
+}
+
+.button-save span {
+    margin: auto;
+    font-size: 30px;
+    color: #FAF3F3;
+}
+
+.button-cancel {
+    height: 7em;
+    width: 20em;
+    margin-left: 2.5em;
+    font-size: 1em;
+    border-radius: 18px;
+    border: none;
+    background: #F5F5DC;
+
+}
+
+.button-cancel span {
+    margin: auto;
+    font-size: 20px;
+    color: #0A3871;
+}
+
+/*--------------------------------------------------------------------------------------------------------Screen Game---------------------------------------------------------------------------------------------------------------*/
+
+
+.screen-game {
+    display: none;
+}
+
+.hanged-picture {
+    width: 340px;
+    height: 360px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.base1 {
+    position: absolute;
+    margin-top: 354.4px;
+}
+
+.base2 {
+    position: absolute;
+    margin-left: 24px;
+}
+
+.base3 {
+    position: absolute;
+    margin-left: 24px;
+}
+
+.base4 {
+    position: absolute;
+    margin-left: 198px;
+}
+
+.base5 {
+    position: absolute;
+    margin-top: 47px;
+    margin-left: 168.15px;
+    display: none;
+}
+
+.base6 {
+    position: absolute;
+    margin-top: 109.6px;
+    margin-left: 198px;
+    display: none;
+}
+
+.base7 {
+    position: absolute;
+    margin-top: 115px;
+    margin-left: 162.9px;
+    display: none;
+}
+
+.base8 {
+    position: absolute;
+    margin-top: 115px;
+    margin-left: 201.2px;
+    display: none;
+}
+
+.base9 {
+    position: absolute;
+    margin-top: 242px;
+    margin-left: 200px;
+    display: none;
+}
+
+.base10 {
+    position: absolute;
+    margin-top: 242px;
+    margin-left: 161.9px;
+    display: none;
+}
+
+.game-finished-victory {
+    width: 30px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 280px;
+    display: none;
+}
+
+.game-finished-victory p {
+    font-size: 30px;
+    color: green;
+    font-weight: bold;
+}
+
+.game-finished-lose {
+    width: 150px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 280px;
+    display: none;
+
+}
+
+.game-finished-lose p {
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+}
+
+.guessed-words-centred {
+    display: flex;
+    justify-content: center;
+}
+
+.guessed-words-position {
+    width: 52%;
+    position: absolute;
+    margin: 2em 0 0 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.guessed-words-position span {
+    width: 80px;
+    visibility: hidden;
+    font-size: 2em;
+    margin-left: 20px;
+
+}
+
+.words-space-centred {
+    display: flex;
+    justify-content: center;
+}
+
+.words-space-position {
+    width: 52%;
+    position: absolute;
+    margin: 5em;
+    display: flex;
+    justify-content: center;
+
+}
+
+.words-space {
+    max-width: 80px;
+    height: auto;
+    object-fit: contain;
+    margin-left: 20px;
+}
+
+.wrong-words-position {
+    width: 30%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin: 8em;
+}
+
+.wrong-words {
+    margin-left: 1.5em;
+}
+
+.ul-new-game-position {
+    list-style: none;
+    margin: 12em 0 0 0;
+}
+
+.ul-new-game-position li {
+    display: inline-block;
+}
+
+.button-new-game {
+    height: 7em;
+    width: 20em;
+    font-size: 1em;
+    background: #AAB2D5;
+    border-radius: 20px;
+    border: none;
+    margin-right: 3em;
+}
+
+.button-new-game span {
+    margin: auto;
+    font-size: 30px;
+    color: #FAF3F3;
+}
+
+.button-desist {
+    height: 7em;
+    width: 20em;
+    margin-left: 2.5em;
+    font-size: 1em;
+    border-radius: 18px;
+    border: none;
+    background: #F5F5DC;
+
+}
+
+.button-desist span {
+    margin: auto;
+    font-size: 20px;
+    color: #0A3871;
+}
+.input-prueba{
+    position: absolute;
+    width: 21rem;
+    height: 2rem;
+    background: none transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    margin-top: 139%;
+    display: none;
+    font-size: 16px;
+    color: #e9ecf8;
+}
+.input-prueba::placeholder {
+    text-align: center; 
+ }
+.input-prueba:focus {
+    /*visibility: hidden;*/
+    text-align: center;
+}
+
+/*Codigo button Active*/
+button:active {
+    border: 3px solid black;
+}
+
+/* Responsive */
+@media screen and (max-width:1280px) {
+    .logo{
+        width: 40px;
+        margin: 1em;
+    }
+    .ul-new-game-position ul{
+         margin-bottom: 2em;
+    }
+    /*Screen Add word*/
+    .advice-words {
+        width: 50%;
+    }
+    /*Screen Game*/
+    .ul-new-game-position{
+        margin: 8em 0 0 0;
+    }
+    .wrong-words-position{
+        margin: 6.1em;
+    }
+}
+
+
+@media screen and (max-width:840px) {
+    /*ScreenPrincipal*/
+    .ul-inicio {
+        margin-top: 10%;
+    }
+    /*ScreeAddWord*/
+    .advice-words{
+        margin: 1em 10%;
+    }
+    /*ScreenGame*/
+    .guessed-words-position {
+        width: 100%;
+    }
+    .words-space{
+        max-width: 50px;
+        margin-left: 55px;
+    }
+    .words-space-position{
+        margin-left: 40px;
+    }
+    .guessed-words-position{
+        margin: 2em 0 0 4em;
+    }
+    .guessed-words-position span {
+        width: 88px;
+        font-size: 1.9em;
+    }
+    
+    .ul-new-game-position{
+        margin: 15rem 0 0 0;
+    }
+    .input-prueba{
+        display: block;
+        font-size: 1.5em;
+        margin-top: 155%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .logo {
+        margin: 1em 0 0 1em;
+        width: 35px;
+    }
+
+    /*ScreenPrincipal*/
+    .ul-inicio {
+        margin: 12%;
+    }
+
+    .buttons-position-start {
+        margin: 6em 0;
+    }
+    .button-start-game {
+        height: 7em;
+    }
+    .button-add-word{
+        height: 5.5em;
+    }
+
+    /*Screen agregar palabra*/
+    .textarea-position{
+        width: auto;
+    }
+
+    .textarea-position textarea {
+        height: 1em;
+        margin: 5rem auto;
+        font-size: 2em;
+        text-align: center;
+    }
+    .textarea-position textarea::placeholder{
+        text-align: center;
+    }
+    .textarea-position textarea:focus{
+        text-align: center;
+    }
+    .advice-words{
+        margin-bottom: 2em;
+        margin: 1em auto;
+    }
+    .ul-add-word li {
+        margin:1.5em auto;
+    }
+    .button-save{
+        width: 15em;
+    }
+    .button-cancel {
+        margin-left: 0;
+        width: 15em;
+    }
+
+    /*Screen Game*/
+    .hanged-picture{
+        margin-top: 30px;
+    }
+    .guessed-words-position {
+        width: 35%;
+        margin: .5em 0 0 3em;
+    }
+    .guessed-words-position span {
+        margin-right: .98em;
+        margin-left: 0;
+        font-size: 1.65em;
+    }
+    .game-finished-victory{
+        margin-left: 210px;
+        margin-top: 40px;
+    }
+    .game-finished-victory:focus{
+        font-size: .5em;
+    }
+    .game-finished-lose{
+        margin-left: 210px;
+        margin-top: 40px;
+    }
+    .words-space-centred {
+        margin: -40px 0 0 0;
+    }
+    .ul-new-game-position {
+        margin: 8em 0 0 5em;
+    }
+    .wrong-words-position{
+        margin: 6em;
+    }
+    .words-space-position{
+        margin-left: 110px;
+    }
+    .words-space{
+        max-width: 30px;
+        margin-left: 0px;
+        margin-right: 12px;
+    }
+    .ul-new-game-position{
+        margin: 10em 0 0 1.5em;
+    }
+    .ul-new-game-position ul{
+        margin-bottom: 0;
+    }
+    .button-new-game{
+        width: 8rem;
+        height: 4rem;
+        margin-right: 1rem;
+    }
+    .button-new-game span{
+        font-size: 1rem;
+    }
+    .button-desist{
+        margin-left: 0;
+        width: 8rem;
+        height: 4rem;
+    }
+    .button-desist span{
+        font-size: 1rem;
+    }
+    .input-prueba{
+        display: block;
+        margin-top: 127%;
+        font-size: 16px;
+    }
+
+
+
+}
+
+@media screen and (max-width:390px) {
+    .logo {
+        margin: .5em 0 0 .5em;
+    }
+    /*ScreenPrincipal*/
+    .ul-inicio {
+        margin: 8%;
+    }
+    /*Screen agregar palabra*/
+    .advice-words{
+        margin-left: 80px;
+    }
+    
+    .ul-add-word li {
+        margin:1em auto;
+    }
+    /*Screen Game*/
+    .ul-new-game-position{
+        margin: 10em 0 0 0;
+    }
+    .hanged-picture{
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width:360px) {
+
+    /*ScreenPrincipal*/
+    .ul-inicio {
+        margin: 6%;
+    }
+    /*Screen Game*/
+    .ul-new-game-position{
+        margin: 9.12em 0 0 0;
+    }
+    .hanged-picture{
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+    .prueba-input{
+        margin-left: -20px;
+    }
+}
